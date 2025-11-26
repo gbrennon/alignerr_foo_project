@@ -1,0 +1,165 @@
+########################################
+# OS / EDITOR / TOOLING
+########################################
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux / misc
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+*~
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# JetBrains IDEs (IntelliJ, PyCharm, WebStorm)
+.idea/
+*.iml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+########################################
+# PYTHON (Poetry, UV, pip, pytest, mypy)
+########################################
+
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Poetry
+.poetry/
+poetry.lock
+
+# UV
+.uv/
+
+# Pip
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# Test artefacts
+.pytest_cache/
+.cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+.pyre/
+pyrightconfig.json
+
+########################################
+# JAVASCRIPT / TYPESCRIPT (Node, Bun, Deno)
+########################################
+
+# Dependencies
+node_modules/
+bun.lockb
+pnpm-lock.yaml
+npm-debug.log*
+
+# Builds
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+
+# TS
+*.tsbuildinfo
+
+# Vite / Webpack / Rollup / Parcel
+.vite/
+.cache/
+parcel-cache/
+.esbuild/
+
+########################################
+# JAVA (Gradle, Maven, IntelliJ, JDK)
+########################################
+
+# Build artefacts
+target/
+build/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+gradle-app.setting
+**/build/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.jpi
+
+########################################
+# DOCKER
+########################################
+
+# General
+*.pid
+*.seed
+*.pid.lock
+
+# Compose
+docker-compose.override.yml
+docker-compose.dev.yml
+
+########################################
+# MISC
+########################################
+
+# Local app data
+*.local
+.cache/
+
+# Certificates
+*.pem
+*.crt
+*.key
+
+########################################
+# OPTIONAL STRICTNESS (uncomment if desired)
+########################################
+
+# Ignore all zips (useful for your task system)
+# *.zip
+
+# Ignore SQLite databases
+# *.db
+# *.sqlite
