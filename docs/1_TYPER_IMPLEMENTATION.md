@@ -1,3 +1,0 @@
-- Implemented the use of `typer` library in `main.py`
-- Changed the script to accept a command-line argument `name` with a default value of "World"
-- The script now prints a greeting message using `typer.echo`

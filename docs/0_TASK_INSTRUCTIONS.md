@@ -1,4 +1,0 @@
-- At the start of a task read all files inside docs dir
-- This is a Python project
-- You should implement everything in memory
--  At the end of the task you should add files to stage area and commit ur progress
