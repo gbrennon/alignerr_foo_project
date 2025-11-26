@@ -22,7 +22,7 @@ def main():
     typer.echo("Welcome to the User Registration CLI")
     typer.echo("1. Register User")
     
-    option = typer.prompt("Select an option", choices=["1"])
+    option = typer.prompt("Select an option")
     
     if option == "1":
         register_user()
