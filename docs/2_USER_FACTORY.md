@@ -1,0 +1,2 @@
+- Defined `UserFactory` protocol with `create` method
+- Implemented `UuidUserFactory` that generates UUID for user id
