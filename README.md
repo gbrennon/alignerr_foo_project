@@ -35,6 +35,12 @@ This project uses NPM for dependency management and TypeScript for type-safe cod
 npx tsc
 ```
 
+### Testing
+
+```bash
+npx jest
+```
+
 ### Result Type
 
 The project includes a `Result<T>` interface with:
