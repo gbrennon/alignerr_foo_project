@@ -10,6 +10,6 @@ describe('basic-usage', () => {
         };
 
         expect(divide(10, 2).unwrap()).toBe(5);
-        expect(divide(10, 0).unwrap()).toBe('Division by zero');
+        expect(() => divide(10, 0).unwrap()).toThrow(new Error('Division by zero'));
     });
 });

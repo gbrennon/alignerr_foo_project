@@ -16,7 +16,11 @@ export class Ok<T> implements Result<T, never> {
     }
 
     map<U>(f: (value: T) => U): Result<U, never> {
-        return new Ok(f(this.value));
+        const result = f(this.value);
+        if (result instanceof Err) {
+            return result as Result<U, never>;
+        }
+        return new Ok(result);
     }
 
     mapErr<E2>(f: (err: never) => E2): Result<T, E2> {
