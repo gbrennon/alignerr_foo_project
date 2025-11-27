@@ -5,6 +5,7 @@ This is a TypeScript project following the setup rules defined in `docs/0_SETUP_
 ## Project Structure
 
 - `src/` - Contains all source code
+- `tests/` - Contains test files
 - `docs/` - Contains project documentation and rules
 
 ## Setup
@@ -16,7 +17,13 @@ npm install
 
 ## Development
 
-This project uses NPM for dependency management.
+This project uses NPM for dependency management and TypeScript for type-safe code.
+
+### Building
+
+```bash
+npx tsc
+```
 
 ## Documentation
 

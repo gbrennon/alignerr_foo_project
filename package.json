@@ -1,0 +1,27 @@
+{
+  "name": "foo-alignerr-project",
+  "version": "1.0.0",
+  "description": "This is a TypeScript project following the setup rules defined in `docs/0_SETUP_RULES.md`.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbrennon/alignerr_foo_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gbrennon/alignerr_foo_project/issues"
+  },
+  "homepage": "https://github.com/gbrennon/alignerr_foo_project#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
