@@ -22,6 +22,6 @@ export class Err<E> implements Result<E> {
     }
 
     unwrap(): E {
-        throw new Error(String(this.error));
+        return this.error;
     }
 }

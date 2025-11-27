@@ -37,9 +37,9 @@ npx tsc
 
 ### Result Type
 
-The project includes a `Result<T, E>` interface with:
+The project includes a `Result<T>` interface with:
 - `Ok<T>` class for successful outcomes
-- `Err<E>` class for error handling
+- `Err<E>` class for error handling where `unwrap()` returns the error value
 
 ## Documentation
 
