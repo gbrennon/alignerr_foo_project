@@ -25,6 +25,22 @@ This project uses NPM for dependency management and TypeScript for type-safe cod
 npx tsc
 ```
 
+## Development
+
+This project uses NPM for dependency management and TypeScript for type-safe code.
+
+### Building
+
+```bash
+npx tsc
+```
+
+### Result Type
+
+The project includes a `Result<T, E>` interface with:
+- `Ok<T>` class for successful outcomes
+- `Err<E>` class for error handling
+
 ## Documentation
 
 For detailed setup rules and guidelines, see [`docs/0_SETUP_RULES.md`](docs/0_SETUP_RULES.md)
