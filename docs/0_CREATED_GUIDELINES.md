@@ -1,4 +1,4 @@
-Created docs/0_GUIDELINES.md with the following content:
+In this task, I created the file `docs/0_GUIDELINES.md` with the following content:
 
 You should do the following before executing prompt instructions:
 - Read all files inside `docs/`
