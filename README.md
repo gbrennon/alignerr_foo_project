@@ -11,6 +11,7 @@ Follow the rules described in `docs/0_SETUP_RULES.md`.
 - Todo entity with validation
 - Unit tests for Todo entity
 - TodoRepositoryPort for data storage operations
+- Application layer ports for Todo services
 
 ## Running Tests
 
@@ -27,3 +28,4 @@ For detailed documentation, see the `docs/` directory:
 - [Todo Guidelines](docs/TODO_GUIDELINES.md)
 - [Todo Improvements](docs/1_todo_improvements.md)
 - [Repository Port](docs/2_repository_port.md)
+- [Application Ports](docs/3_application_ports.md)
