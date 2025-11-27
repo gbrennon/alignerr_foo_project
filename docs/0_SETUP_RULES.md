@@ -1,0 +1,7 @@
+- Redd all files inside `docs/`.
+- They will be the rules you should follow before applying prompt understands.
+- This is going to be a poetry <stack> project.
+- The source code should be inside the `src/` folder.
+- Poetry will manage dependencies and virtual environments.
+- Use `poetry add <package>` to add new dependencies.
+- Use `poetry install` to install dependencies from `pyproject.toml`.
