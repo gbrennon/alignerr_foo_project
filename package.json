@@ -1,5 +1,5 @@
 {
-  "name": "foo-alignerr-project",
+  "name": "result.ts",
   "version": "1.0.0",
   "description": "This is a TypeScript project following the setup rules defined in `docs/0_SETUP_RULES.md`.",
   "main": "index.js",
