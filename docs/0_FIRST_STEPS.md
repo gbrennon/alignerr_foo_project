@@ -1,0 +1,2 @@
+- At the start of a task read all files inside `docs/` dir
+- At the end of the task write a new md file inside `docs/` and commit
