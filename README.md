@@ -10,6 +10,7 @@ Follow the rules described in `docs/0_SETUP_RULES.md`.
 
 - Todo entity with validation
 - Unit tests for Todo entity
+- TodoRepositoryPort for data storage operations
 
 ## Running Tests
 
@@ -21,4 +22,8 @@ poetry run pytest
 
 ## Documentation
 
-For detailed documentation, see the `docs/` directory.
+For detailed documentation, see the `docs/` directory:
+- [Setup Rules](docs/0_SETUP_RULES.md)
+- [Todo Guidelines](docs/TODO_GUIDELINES.md)
+- [Todo Improvements](docs/1_todo_improvements.md)
+- [Repository Port](docs/2_repository_port.md)
