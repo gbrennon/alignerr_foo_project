@@ -16,6 +16,6 @@ describe('advanced-patterns', () => {
         };
 
         expect(validateAndProcess('hello').unwrap()).toBe('HELLO');
-        expect(validateAndProcess('hi').unwrap()).toBe('Input too short (validation failed)');
+        expect(validateAndProcess('hi')).toBe(new Err('Input too short (validation failed)'));
     });
 });

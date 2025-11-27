@@ -18,7 +18,7 @@ describe('error-handling', () => {
         }
 
         const result2 = parseIntSafe('not-a-number');
-        const defaultValue = result2.unwrap() || '0';
+        const defaultValue = result2 instanceof Err ? '0' : result2.unwrap();
         expect(defaultValue).toBe('0');
     });
 });

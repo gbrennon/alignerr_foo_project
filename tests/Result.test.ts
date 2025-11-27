@@ -6,8 +6,8 @@ describe('Result', () => {
         expect(value.unwrap()).toBe(42);
     });
 
-    test('Err.unwrap() returns the error', () => {
-        const error = new Err('Test error');
-        expect(error.unwrap()).toBe('Test error');
+    test('Err.unwrap() throws the error', () => {
+        const err = new Err('Test error');
+        expect(() => err.unwrap()).toThrow('Test error');
     });
 });

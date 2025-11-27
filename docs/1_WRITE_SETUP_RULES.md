@@ -1,4 +1,3 @@
-Task 1: Write docs/0_SETUP_RULES.md
+## Task 1: Write Setup Rules
 
-- Created the initial setup rules documentation as specified in the task requirements.
-- The file contains the project configuration guidelines.
+- Created `docs/0_SETUP_RULES.md` with the required setup rules for the project.
