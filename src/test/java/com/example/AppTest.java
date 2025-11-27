@@ -1,38 +1,34 @@
 package com.example;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
- * Unit test for simple App.
+ * Unit test for Result class.
  */
 public class AppTest 
-    extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+    @Test
+    public void testResultOk() {
+        Result<Integer> result = new Result.Ok<>(42);
+        assertEquals(42, (int) result.unwrap());
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    @Test
+    public void testResultErr() {
+        Result<Integer> result = new Result.Err<>("Error message");
+        Exception exception = assertThrows(RuntimeException.class, () -> result.unwrap());
+        assertEquals("Error message", exception.getMessage());
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    public void testDivide() {
+        Result<Integer> result = DivideExample.divide(10, 2);
+        assertEquals(5, (int) result.unwrap());
+
+        result = DivideExample.divide(-10, 2);
+        Exception exception = assertThrows(RuntimeException.class, () -> result.unwrap());
+        assertEquals("Dividend is negative", exception.getMessage());
     }
 }
