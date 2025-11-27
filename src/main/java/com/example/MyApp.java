@@ -1,7 +1,7 @@
 package com.example;
 
 import io.dropwizard.Application;
-import io.dropwizard.configuration.EmptyConfiguration;
+import io.dropwizard.EmptyConfiguration;
 import io.dropwizard.setup.Environment;
 
 public class MyApp extends Application<EmptyConfiguration> {
