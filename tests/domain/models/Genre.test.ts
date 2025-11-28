@@ -1,5 +1,5 @@
-import { Genre, GenreEnum } from '../src/domain/models/Genre';
-import { DomainErrors } from '../src/core/DomainErrors';
+import { Genre, GenreEnum } from '../../../src/domain/models/Genre';
+import { DomainErrors } from '../../../src/core/DomainErrors';
 
 describe('Genre', () => {
     describe('create', () => {
@@ -17,7 +17,7 @@ describe('Genre', () => {
             const invalidGenre = 'Invalid Genre';
             const result = Genre.create(invalidGenre);
 
-            expect(result).toBeInstanceOf(DomainErrors);
+            expect(result).toBe(DomainErrors);
         });
     });
 });

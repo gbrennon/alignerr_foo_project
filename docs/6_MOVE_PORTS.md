@@ -1,0 +1,2 @@
+- Moved `ports` directory to `src/domain/ports`
+- Verified no code references to `ports` existed before moving

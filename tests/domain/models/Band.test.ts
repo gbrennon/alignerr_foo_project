@@ -1,5 +1,5 @@
-import { Band, RawBand } from '../src/domain/models/Band';
-import { DomainErrors } from '../src/core/DomainErrors';
+import { Band, RawBand } from '../../../src/domain/models/Band';
+import { DomainErrors } from '../../../src/core/DomainErrors';
 
 describe('Band', () => {
     describe('fromRaw', () => {
@@ -24,7 +24,7 @@ describe('Band', () => {
             };
 
             const result = Band.fromRaw(rawBand);
-            expect(result).toBeInstanceOf(DomainErrors);
+            expect(result).toBe(DomainErrors);
         });
     });
 });
