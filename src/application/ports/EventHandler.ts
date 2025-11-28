@@ -1,7 +1,5 @@
-import { IssueOpenedEvent } from '../../domain/events/IssueOpenedEvent';
-import { IssueClosedEvent } from '../../domain/events/IssueClosedEvent';
+import { Event } from '../../domain/events/Event';
 
-export interface EventHandler {
-    handle(event: IssueOpenedEvent): void;
-    handle(event: IssueClosedEvent): void;
+export interface EventHandler<T extends Event> {
+    handle(event: T): void;
 }
