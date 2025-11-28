@@ -8,7 +8,7 @@ This project demonstrates a minimal Dropwizard application.
 
 ## Setup
 
-Follow the instructions in `docs/0_SETUP_RULES.md`.
+Follow setup rules in `docs/`.
 
 ## Building
 

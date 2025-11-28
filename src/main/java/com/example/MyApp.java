@@ -1,13 +1,21 @@
 package com.example;
 
 import io.dropwizard.Application;
-import io.dropwizard.EmptyConfiguration;
+import io.dropwizard.Configuration;
 import io.dropwizard.setup.Environment;
 
-public class MyApp extends Application<EmptyConfiguration> {
+public class MyApp extends Application<Configuration> {
+    public static class PingResource {
+        @javax.ws.rs.Path("/ping")
+        public String getPing() {
+            return "pong";
+        }
+    }
+
     @Override
-    public void run(EmptyConfiguration configuration, Environment environment) throws Exception {
-        // This is a minimal implementation
+    public void run(Configuration configuration, Environment environment) throws Exception {
+        System.out.println("Hello World");
+        environment.jersey().register(new PingResource());
     }
 
     public static void main(String[] args) throws Exception {

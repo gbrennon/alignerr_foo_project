@@ -1,0 +1,8 @@
+server:
+  type: simple
+  port: 8080
+
+logging:
+  level: INFO
+  appenders:
+    - type: stdout
