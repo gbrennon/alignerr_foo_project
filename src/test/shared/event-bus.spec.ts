@@ -1,6 +1,6 @@
-import { EventBus } from '../../src/shared/EventBus';
-import { Event } from '../../src/shared/Event';
-import { EventHandler } from '../../src/shared/EventHandler';
+import { EventBus } from '../../shared/EventBus';
+import { Event } from '../../shared/Event';
+import { EventHandler } from '../../shared/EventHandler';
 
 class TestEvent implements Event {
     payload: Record<string, unknown>;
@@ -11,10 +11,6 @@ class TestEvent implements Event {
 
     toPayload(): Record<string, unknown> {
         return this.payload;
-    }
-
-    getId(): string {
-        return this.payload.type as string;
     }
 }
 

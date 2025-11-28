@@ -2,17 +2,16 @@ import { Event } from './Event';
 import { EventHandler } from './EventHandler';
 
 export class EventBus {
-    private handlers: Map<Function, EventHandler<any>> = new Map();
+    private handlers: Map<Function, EventHandler<any>[]> = new Map();
 
     public publish(event: Event): void {
-        this.handlers.forEach((handler, eventConstructor) => {
-            if (event.constructor === eventConstructor) {
-                handler.handle(event);
-            }
-        });
+        const handlers = this.handlers.get(event.constructor);
+        handlers?.forEach(handler => handler.handle(event));
     }
 
     public subscribe<T extends Event>(handler: EventHandler<T>, event: T): void {
-        this.handlers.set(event.constructor, handler);
+        const existingHandlers = this.handlers.get(event.constructor) || [];
+        existingHandlers.push(handler);
+        this.handlers.set(event.constructor, existingHandlers);
     }
 }
