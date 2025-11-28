@@ -1,0 +1,4 @@
+- This is a TypeScript project using the framework NestJS and in memory database using hashmap
+- This project is a "Issue Manager" that apply some DDD concepts
+- At the end of each task you should write a new file in `docs/` applying the following name style: `<task_number>_<task_description>.md`  and in its content should explain what was done
+- After improving docs commit and push code
