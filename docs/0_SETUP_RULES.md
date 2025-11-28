@@ -1,0 +1,9 @@
+- Read all files inside `docs/` in the start of the task.
+- They will be the rules you should follow before applying prompt understands.
+- This is going to be a typescript project.
+- The source code should be inside the `src/` folder.
+- NPM will manage dependencies
+- To initialize project use `npm init -y`
+- Use `npm install <package>` to add new dependencies to project and register them to package.json.
+- In the end of the task write a new md file inside `docs/` with the following name style: `<task_number>_<what_was_implement_in_this_task>.md`
+- After improving `docs/`, improve `README.md` with info about the project, commit and then push.
