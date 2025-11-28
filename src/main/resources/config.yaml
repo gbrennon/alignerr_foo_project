@@ -1,6 +1,7 @@
 server:
   type: simple
-  port: 8080
+  connector:
+    port: 8080
 
 logging:
   level: INFO

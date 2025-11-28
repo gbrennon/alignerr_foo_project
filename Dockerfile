@@ -16,6 +16,9 @@ RUN mvn dependency:go-offline
 # Copy the rest of the application
 COPY src ./src
 
+# Copy config file
+COPY src/main/resources/config.yaml .
+
 # Build the project
 RUN mvn package
 
@@ -23,4 +26,4 @@ RUN mvn package
 RUN chmod +x target/*.jar
 
 # Command to run the application
-CMD ["java", "-jar", "target/foo-alignerr-project-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/foo-alignerr-project-1.0-SNAPSHOT.jar", "server", "config.yaml"]
