@@ -1,5 +1,5 @@
-import { Genre, GenreEnum } from './Genre';
-import { DomainErrors } from '../../core/DomainErrors';
+import { Genre, GenreEnum } from '../src/domain/models/Genre';
+import { DomainErrors } from '../src/core/DomainErrors';
 
 describe('Genre', () => {
     describe('create', () => {

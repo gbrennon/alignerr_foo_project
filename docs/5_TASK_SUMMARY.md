@@ -1,0 +1,2 @@
+- Written `docs/0_SETUP_RULES.md` with essential project setup rules.
+- Improved `README.md` with comprehensive project information and structure overview.

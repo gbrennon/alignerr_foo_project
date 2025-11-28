@@ -1,5 +1,5 @@
-import { Band, RawBand } from './Band';
-import { DomainErrors } from '../../core/DomainErrors';
+import { Band, RawBand } from '../src/domain/models/Band';
+import { DomainErrors } from '../src/core/DomainErrors';
 
 describe('Band', () => {
     describe('fromRaw', () => {
