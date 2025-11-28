@@ -2,10 +2,14 @@ import { Event } from './Event';
 import { EventHandler } from './EventHandler';
 
 export class EventBus {
-    private handlers: Map<typeof Event, EventHandler<any>> = new Map();
+    private handlers: Map<Function, EventHandler<any>> = new Map();
 
     public publish(event: Event): void {
-        // Implementation will go here
+        this.handlers.forEach((handler, eventConstructor) => {
+            if (event.constructor === eventConstructor) {
+                handler.handle(event);
+            }
+        });
     }
 
     public subscribe<T extends Event>(handler: EventHandler<T>, event: T): void {
