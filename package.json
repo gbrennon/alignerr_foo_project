@@ -1,0 +1,34 @@
+{
+  "name": "metallum-express-event-driven",
+  "version": "1.0.0",
+  "description": "Follow the setup rules documented in [docs/0_SETUP_RULES.md](docs/0_SETUP_RULES.md)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbrennon/alignerr_foo_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gbrennon/alignerr_foo_project/issues"
+  },
+  "homepage": "https://github.com/gbrennon/alignerr_foo_project#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.6",
+    "drizzle-orm": "^0.44.7"
+  }
+}
