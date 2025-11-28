@@ -5,14 +5,24 @@ import { Issue } from '../../domain/entities/Issue';
 import { IssueOpenedEvent } from '../../domain/events/IssueOpenedEvent';
 
 describe('OpenIssueUseCaseImpl', () => {
-    let issueRepository: MockIssueRepository;
-    let eventBus: MockEventBus;
+    let issueRepository: Partial<IssueRepository>;
+    let eventBus: Partial<EventBus>;
     let useCase: OpenIssueUseCaseImpl;
 
     beforeEach(() => {
-        issueRepository = new MockIssueRepository();
-        eventBus = new MockEventBus();
-        useCase = new OpenIssueUseCaseImpl(issueRepository, eventBus);
+        issueRepository = {
+            save: jest.fn().mockResolvedValue({
+                id: 'mock-id',
+                title: 'Valid Title',
+                description: 'Valid Description'
+            } as Issue),
+        };
+
+        eventBus = {
+            publish: jest.fn().mockResolvedValue(),
+        };
+
+        useCase = new OpenIssueUseCaseImpl(issueRepository as IssueRepository, eventBus as EventBus);
     });
 
     it('should save issue and publish event', async () => {
@@ -20,39 +30,8 @@ describe('OpenIssueUseCaseImpl', () => {
 
         const result = await useCase.execute(request);
 
-        expect(issueRepository.save).toHaveBeenCalled();
+        expect(issueRepository.save).toHaveBeenCalledWith(expect.objectContaining(request));
         expect(eventBus.publish).toHaveBeenCalledWith(expect.any(IssueOpenedEvent));
-        expect(result.id).toBeDefined();
+        expect(result.id).toBe('mock-id');
     });
 });
-
-class MockIssueRepository implements IssueRepository {
-    async save(issue: Issue): Promise<Issue> {
-        // Simple mock implementation
-        return { ...issue, id: 'mock-id' } as Issue;
-    }
-
-    async getById(id: string): Promise<Issue | null> {
-        return null;
-    }
-
-    async listAll(): Promise<Issue[]> {
-        return [];
-    }
-
-    async delete(id: string): Promise<void> {
-        // Empty implementation
-    }
-}
-
-class MockEventBus implements EventBus {
-    async publish(event: any): Promise<void> {
-        // Mock publish
-        return Promise.resolve();
-    }
-
-    async subscribe(eventType: string, callback: (event: any) => void): Promise<void> {
-        // Mock subscribe
-        return Promise.resolve();
-    }
-}
