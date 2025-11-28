@@ -1,10 +1,14 @@
-# Foo Alignerr Project
+# Employee Manager
 
-This is a TypeScript project following specific setup rules.
+A TypeScript project following DDD architecture with Express, SQLite and Drizzle ORM.
 
 ## Project Structure
 
-- `src/` - Main source code directory
+- `src/` - Main source code following DDD layers:
+  - `domain/` - Business logic
+  - `adapters/` - Implementation of ports
+  - `ports/` - Interfaces and base classes
+
 - `docs/` - Documentation files with setup rules and guidelines
 
 ## Setup
@@ -18,4 +22,4 @@ This is a TypeScript project following specific setup rules.
 
 ## Development
 
-This project should follow the development standards outlined in the documentation directory.
+This project uses Express.js as the web framework and SQLite with Drizzle ORM for data persistence.
