@@ -95,7 +95,11 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Project Rules
 
-Before setup read all files into `docs/` directory
+Before setup read all files inside `docs/` directory.
+They will be the rules you should follow before applying prompt understands.
+This is going to be a typescript project.
+NPM will manage dependencies
+Use `npm install <package>` to add new dependencies.
 
 ## License
 
